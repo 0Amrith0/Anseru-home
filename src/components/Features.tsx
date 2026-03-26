@@ -97,7 +97,7 @@ export default function Features() {
   );
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full pt-16 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-5 md:mb-10 gap-6 md:gap-8">

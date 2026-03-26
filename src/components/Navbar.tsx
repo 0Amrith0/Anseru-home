@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/Vector.png";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,12 +53,12 @@ export default function Navbar() {
 
         {/* CTA Button & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button
+          <Link to="https://calendly.com/kg-goutham-anseru" 
             className="bg-black text-white px-5 py-2 rounded-[5px] text-sm font-medium 
           hover:bg-gray-800 transition cursor-pointer"
           >
             Talk to Founders
-          </button>
+          </Link>
 
           <button
             className="md:hidden text-black focus:outline-none"

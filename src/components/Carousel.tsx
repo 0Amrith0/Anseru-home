@@ -197,7 +197,8 @@ export default function Carousel() {
       const rect = container.getBoundingClientRect();
 
       // 🔥 VISIBILITY
-      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      const visibleHeight =
+        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
 
       const visibilityRatio = visibleHeight / rect.height;
 
@@ -225,7 +226,7 @@ export default function Carousel() {
         (currentIndex === 0 && scrollingUp) ||
         (currentIndex === maxIndex && scrollingDown)
       ) {
-        document.body.style.overflow = ""
+        document.body.style.overflow = "";
         return;
       }
 
@@ -245,7 +246,7 @@ export default function Carousel() {
 
       setTimeout(() => {
         isSnappingRef.current = false;
-        document.body.style.overflow = ""
+        document.body.style.overflow = "";
       }, 600);
     };
 
@@ -266,9 +267,9 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-full bg-white relative pt-8 pb-0">
+    <div className="w-full bg-white relative pt-8 pb-10">
       {/* Header */}
-      <div className="z-20 pt-5 pb-5 bg-white/95 backdrop-blur-sm shrink-0">
+      <div className="z-20 pt-15 pb-5 bg-white/95 backdrop-blur-sm shrink-0">
         <div className="text-center space-y-2">
           <p className="anseru-section-tag">How It Works</p>
           <h2 className="anseru-section-title mb-8">
@@ -278,7 +279,7 @@ export default function Carousel() {
           </h2>
 
           {/* corousel bars */}
-          <div className="fixed left-1/11 top-[293%] -translate-y-1/2 flex flex-col gap-3 z-30">
+          <div className="fixed left-1/11 top-[250%] -translate-y-1/2 flex flex-col gap-3 z-30">
             {slideData.map((_, index) => (
               <button
                 key={index}
